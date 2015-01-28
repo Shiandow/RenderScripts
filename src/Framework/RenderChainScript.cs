@@ -169,7 +169,7 @@ namespace Mpdn.RenderScript
             }
         }
 
-        public bool HasConfigDialog()
+        public virtual bool HasConfigDialog()
         {
             return false;
         }

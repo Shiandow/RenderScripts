@@ -75,7 +75,10 @@ namespace Mpdn.RenderScript
             }
         }
 
-        bool HasConfigDialog { get { return true; } }
+        public override bool HasConfigDialog() 
+        { 
+            return true; 
+        }
 
         public override void Initialize()
         {
