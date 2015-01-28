@@ -61,13 +61,12 @@ namespace Mpdn.RenderScript
         protected abstract string ConfigFileName { get; }
 
         [YAXDontSerialize]
-        public override ScriptDescriptor Descriptor
+        public override ExtensionUiDescriptor Descriptor
         {
             get
             {
-                return new ScriptDescriptor
+                return new ExtensionUiDescriptor
                 {
-                    HasConfigDialog = true,
                     Guid = ScriptDescriptor.Guid,
                     Name = ScriptDescriptor.Name,
                     Description = ScriptDescriptor.Description,
@@ -75,6 +74,8 @@ namespace Mpdn.RenderScript
                 };
             }
         }
+
+        bool HasConfigDialog { get { return true; } }
 
         public override void Initialize()
         {
